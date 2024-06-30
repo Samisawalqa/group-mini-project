@@ -10,10 +10,9 @@
     display: flex;
     align-items: start;
     gap: 30px;
-    background: url(Taking\ notes-amico.svg)no-repeat;
+    background: url(./assets/img/Taking\ notes-amico.svg)no-repeat;
     background-position: bottom;
     background-size: 600px;
-    
     
 }
 .add-project{

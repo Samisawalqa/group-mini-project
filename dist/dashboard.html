@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tasks list - Tasks Buddy</title>
+        <title>Dashboard - Tasks Buddy</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
         <!-- Top navbar -->
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <nav id="navcolor" class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="dashboard.html">Tasks Buddy</a>      <!-- ***** Need to link to home page ***** -->
             <!-- Sidebar Toggle-->
@@ -35,6 +35,7 @@
                         <li><a class="dropdown-item" href="#!">Logout</a></li>          <!-- ***** Need to link to logout page ***** -->
                     </ul>
                 </li>
+                
             </ul>
         </nav>
         <!-- Full Body -->
@@ -50,7 +51,7 @@
                                 Dashboard
                             </a>
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="projects.html" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Projects
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -70,20 +71,42 @@
                     </div>
                 </nav>
             </div>
-            <!-- Tasks body -->
+            <!-- Dashboard body -->
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tasks</h1>
+                        <h1 class="mt-4">Dashboard</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">All details about your tasks</li>
+                            <li class="breadcrumb-item active">All in your hand</li>
                         </ol>
-                        
-                        <!-- Tasks list view -->
+                        <!-- Card - Tasks details container -->
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">All Tasks</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">To Do Tasks</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">In progress Tasks</div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Completed Tasks</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Projects view -->
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table"></i></i>
-                                All Tasks
+                                <i class="fas fa-table me-1"></i>
+                                All Projects
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -94,7 +117,6 @@
                                             <th>Task</th>
                                             <th>Status</th>
                                             <th>Due Date</th>
-                                            <th>History</th>
                                         </tr>
                                     </thead>
                                     <!-- <tfoot>
@@ -114,7 +136,6 @@
                                             <td>HTML, CSS layout</td>
                                             <td>In progress</td>
                                             <td>2011/04/25</td>
-                                            <td><a href="#">>></a></td>           <!-- Need to make it poup screen for history feature -->
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -122,7 +143,6 @@
                                             <td>User data - json</td>
                                             <td>To Do</td>
                                             <td>2011/07/25</td>
-                                            <td><a href="#">>></a></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
@@ -130,7 +150,6 @@
                                             <td>Design</td>
                                             <td>Compleated</td>
                                             <td>2009/01/12</td>
-                                            <td><a href="#">>></a></td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
@@ -138,7 +157,6 @@
                                             <td>Design</td>
                                             <td>Compleated</td>
                                             <td>2012/03/29</td>
-                                            <td><a href="#">>></a></td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
@@ -146,7 +164,6 @@
                                             <td>Debuging</td>
                                             <td>In progress</td>
                                             <td>2008/11/28</td>
-                                            <td><a href="#">>></a></td>
                                         </tr>
                                     </tbody>
                                 </table>
