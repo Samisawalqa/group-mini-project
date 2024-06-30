@@ -4266,7 +4266,6 @@ textarea.form-control-lg {
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 .card-header:first-child {
@@ -11276,16 +11275,6 @@ td .a {
   margin-right: 50px;
 }
 
-#t_card {
-  border: none;
-}
-
-.addProject {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .button {
   position: relative;
   width: 150px;
@@ -11342,4 +11331,33 @@ td .a {
 
 .button:active {
   border: 1px solid #2e8644;
+}
+
+.proj_show {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#p_show {
+  display: flex;
+  justify-content: space-between;
+}
+
+#t_card {
+  border: none;
+}
+
+#p_cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head_pTasks, .taskItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }

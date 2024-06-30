@@ -85,91 +85,70 @@
                         <li class="breadcrumb-item active">Projects details to followup</li>
                     </ol>
 
-                    <!-- Projects card view -->
-                    <div class="addProject">
-                        <button type="button" class="button">
-                            <span class="button__text">Add Item</span>
-                            <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
-                                    stroke="currentColor" height="24" fill="none" class="svg">
-                                    <line y2="19" y1="5" x2="12" x1="12"></line>
-                                    <line y2="12" y1="12" x2="19" x1="5"></line>
-                                </svg></span>
-                        </button>
-                    </div>
+                <!-- Projects card view -->
+                <!-- Main project show -->
                     <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            All Projects
-                            <form id="sortForm"
-                                class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Search for..."
-                                        aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
-                                            class="fas fa-search"></i></button>
-                                </div>
-                            </form>
-                            <select id="sort-by">
-                                <option value="status">Status</option>
-                                <option value="due-date">Due Date</option>
-                            </select>
+                        <div id="p_show" class="card-header">
+                            <div class="proj_show">
+                                <i class="fas fa-table me-1"></i>
+                                <div>All Projects</div>
+                            </div>
+                            <button type="button" class="button">
+                                <span class="button__text">Add Item</span>
+                                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+                                        stroke="currentColor" height="24" fill="none" class="svg">
+                                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                                    </svg></span>
+                            </button>
                         </div>
-
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            "Project Name"
-                            <form id="sortForm"
-                                class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Search for..."
-                                        aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
-                                            class="fas fa-search"></i></button>
-                                </div>
-                            </form>
-                            <select id="sort-by">
-                                <option value="status">Status</option>
-                                <option value="due-date">Due Date</option>
-                            </select>
-                        </div>
+                    <!-- project cards & add tasks -->
                         <div class="card-body">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-header">
-                                    <strong>To Do</strong>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    
-                                    <div id="p_card">
-                                        <table id="t_card">
-                                            <tr>
-                                                <td>
-                                                    <li class="list-group-item">"1st Task"</li>
-                                                </td>
-                                                <td>
-                                                    <i id="editIcon" class="fa-solid fa-pen"></i>
-                                                </td>
-                                                <td>
-                                                    <i class="fa-solid fa-trash"></i>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <li class="list-group-item">"1st Task"<i id="editIcon"
-                                                class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                <div>"Project Name"</div> 
+                            </div>
+                            <div id="p_cards" class="card-body">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header">
+                                        <div class="head_pTasks">
+                                            <div><strong>To Do</strong></div>
+                                            <i class="fa-solid fa-plus" style="color: #769fcd;"></i>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <li class="list-group-item">"2nd Task"<i id="editIcon"
-                                                class="fa-solid fa-pen"></i></li>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">"Task 1"<i class="fa-solid fa-pen-to-square"></i></li>
+                                        <li class="list-group-item">"Task 2"</li>
+                                        <li class="list-group-item">"Task 3"</li>
+                                    </ul>
+                                  </div>
+                                  <div class="card" style="width: 18rem;">
+                                    <div class="card-header"><strong>
+                                      In progress
+                                    </strong>
                                     </div>
-                                    <div>
-                                        <li class="list-group-item">"3rd Task"<i id="editIcon"
-                                                class="fa-solid fa-pen"></i></li>
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item">"Task 1"</li>
+                                      <li class="list-group-item">"Task 2"</li>
+                                      <li class="list-group-item">"Task 3"</li>
+                                    </ul>
+                                  </div>
+                                  <div class="card" style="width: 18rem;">
+                                    <div class="card-header"><strong>
+                                      Compleated
+                                    </strong>
                                     </div>
-                                </ul>
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item">"Task 1"</li>
+                                      <li class="list-group-item">"Task 2"</li>
+                                      <li class="list-group-item">"Task 3"</li>
+                                    </ul>
+                                  </div>
                             </div>
 
                         </div>
+
                     </div>
                 </div>
                 </div>
