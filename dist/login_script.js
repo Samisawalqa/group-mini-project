@@ -1,4 +1,4 @@
-
+//
 
 // البدء بجزء تحميل الصفحة وتعريف ال Sections 
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             // Alert عند اكتمال تسجيل الدخول 
             if (email && password) {
-                alert('Sign In successful!');
+               
 
 
             } else {
@@ -75,4 +75,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 });
+
 
