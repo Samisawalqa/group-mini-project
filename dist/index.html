@@ -10,9 +10,9 @@
     <!-- start nav -->
     <nav class="sticky">
         <div class="logo">
-            <img src="./assets/img/tasksIcon.png" alt="Tasks Icon">
+            <img src="./assets/img/beforthelast-removebg-preview.png" alt="Tasks Icon">
         </div>
-        <div class="navsign"></div>
+        <div class="navsign">
             <a href="#main"><span>Home</span></a>
             <a href="#contact"><span>Contact</span></a>
             <a href="login_index.html"><span>Join Us</span></a>
@@ -21,49 +21,28 @@
     <!-- end nav -->
 
     <!-- start Main Section -->
+     
 
     <div id="main" class="main">
         <div class="info">
-            <h2>Welcome to</h2>
+            <h2 class="welcom">Welcome to</h2>
             <h1 style="color: #769FCD; "><b>Task management </b></h1>
-            <p>Managing tasks through their various stages from start to finish, while maintaining the required time commitment</p>
-            <button>Let's start</button>
+            <p class="thetxt">Managing tasks through their various stages from start to finish while maintaining the required time commitment.</p>
+            <button><a href="login_index.html"><span style="color: white;">Join Us</span></a></button>
         </div>
         <div class="img">
             <img src="./assets/img/Task-cuate.png" alt="Task Illustration">
         </div>
     </div>
     <!--end Main Section -->
-    <!-- About Us Section -->
-    <section>
-        <h1 class="h1about" style="color: #769FCD; ">why should you use Task management ?</h1>
-        <!--<div class="sec1">
-            <p>
-                Sharing: Share tasks or projects with teams or collaborators.
-                Comments and Discussions: Enable communication and feedback on tasks or projects.
-            </p>
-            <p>
-                Mobile Accessibility:
-                Ensure the website is responsive and accessible on mobile devices for users on the go.
-            </p>
-            <p>
-                Security and Privacy:
-                Implement strong security measures to protect user data and ensure privacy.
-            </p>
-            <p>
-                Feedback and Support:
-                Provide channels for users to give feedback and seek support for any issues.
-            </p>
-        </div>
-    </section>-->
+
 
     <!-- Prioritization Section -->
     <section id="contact" class="lastsec">
         <div class="main">
             <div class="info">
                 <h2 style="color: #769FCD; ">Prioritization</h2>
-                <p>Ability to prioritize tasks to focus on what's most important. 
-                    Deadlines and Reminders: Set deadlines for tasks and receive reminders to stay on track.</p>
+                <p class="thetxt">Ability to prioritize tasks to focus on what's most important. Set deadlines for tasks and receive reminders to stay on track.</p>
             </div>
             <div class="img">
                 <img src="./assets/img/Prioritise-amico.png" alt="Prioritization Illustration">
@@ -78,7 +57,7 @@
         </div>
         <div class="info">
             <h1 style="color: #769FCD; ">Security and Privacy</h1>
-            <p>Implement strong security measures to protect user data and ensure privacy.</p>
+            <p class="thetxt">Implement strong security measures to protect user data and ensure privacy.</p>
         </div>
     </section>
 
@@ -87,7 +66,7 @@
         <div class="main">
             <div class="info">
                 <h2 style="color: #769FCD; ">SMART Goals</h2>
-                <p>Help users set Specific, Measurable, Achievable, Relevant, and Time-bound goals.</p>
+                <p class="thetxt">Track progress towards goals and milestones, keeping users motivated and on target.</p>
             </div>
             <div class="img">
                 <img src="./assets/img/Multi-device_targeting-amico.png" alt="SMART Goals Illustration">
@@ -102,7 +81,7 @@
         </div>
         <div class="info">
             <h1 style="color: #769FCD; ">Progress Tracking</h1>
-            <p>Track progress towards goals and milestones.</p>
+            <p class="thetxt">Track progress towards goals and milestones.</p>
         </div>
     </section>
 
@@ -111,22 +90,47 @@
         <div class="main">
             <div class="info">
                 <h2 style="color: #769FCD;" >Connect with Us</h2>
-                <p>Managing tasks through their various stages from start to finish, while maintaining the required time commitment</p>
-                <div class="contact">
-                    <input placeholder="Enter your email" class="input" name="email" type="email">
-                    <button class="button">Subscribe</button> 
+                <p class="thetxt">Managing tasks through their various stages from start to finish, while maintaining the required time commitment</p>
+                <div class="img">
+                    <img src="./assets/img/Telecommuting-rafiki.png" alt="Progress Tracking Illustration">
                 </div>
             </div>
-            <div class="img">
-            </div>
+        
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+
+
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <hr>
-        <p>cc@2024</p>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p class="theFootAboutTxt">We are dedicated to helping you manage your tasks<br> efficiently and achieve your goals with ease.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="login_index.html">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Task Buddy. All rights reserved.</p>
+        </div>
     </footer>
-
+    
 </body>
 </html>

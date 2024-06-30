@@ -14,8 +14,7 @@ body{
     top: 0;
     width: 100%;
     padding: 05;
-  }
-  
+}
 
 nav{
     display: flex;
@@ -34,10 +33,13 @@ nav{
 .navsign{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 1px;
-    
+    gap: 30px;
+    margin-right: 30px;
+}
+
+.navsign a :hover{
+    color:  #769FCD;
 }
 
 .logo{
@@ -45,15 +47,27 @@ nav{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 0px;
-    
+    margin-left: 30px;
 }
+
+.logo img{
+    width: 90px;
+    margin-right: 20px;
+}
+
+
 a{
     text-decoration: none;
     color: black;
     padding: 3px;
 }
 /* end nav  */
+
+
+
+
+
+
 /* start  sec0  */
 .main{
     display: flex;
@@ -70,24 +84,19 @@ a{
     margin: 40px;
     margin-left: 0;
     font-size: 25px;
-
+    
+}
+.thetxt{
+    width: 500px;
 }
 .main h1{
     font-size: 50px;
-    
 }
 .main h2{
     font-size: 30px;
-   
- 
-}
-.logo img{
-    width: 50px;
-    margin-right: 20px;  
 }
 .img img{
     width: 350px;
-    
 }
 
 button{
@@ -100,39 +109,29 @@ button{
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 1px 4px 6px gray;
     height: 60px;
     width: 150px;
-   
 }
 /* end  sec0  */
 /* start sec1  */
 section{
-  
     margin: 60px;
-   margin-top: 190px;
-   font-size: 23px;
+    margin-top: 90px;
+    font-size: 23px;
 }
 section .sec1{
-   margin: 40px;
+    margin: 40px;
     box-shadow: 1px 4px 6px gray;
     height: 240px;
-   
     padding: 40px;
-
 }
-
 /* end sec1  */
 /* start sec2  */
 .sec2{
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
- 
-   
-    
     gap: 10px;
 }
 .sec2 img{
@@ -144,208 +143,256 @@ section .sec1{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.input {
-   
-    
-    padding: 25px;
-    font-size: 20px;
-    color: black;
-    border-top-left-radius: .5em;
-    border-bottom-left-radius: .5em;
-    border: 2px solid #fff;
-    margin-right: -55px;
-    box-shadow: 1px 4px 6px gray;
-    height: 15px;
-    width: 450px;
-  }
-  
-  .button {
-    border: none;
-    background-color:#769FCD; ;
-    text-decoration: none;
-    padding: 15px;
-    padding-bottom: 17px;
-    font-size: 20px;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 1px 4px 6px gray;
-    height: 70px;
-    width: 200px;
-  }
-  button:hover{
-    background-color: #fff;
-    color: black;
-    transition: 0.4s ease;
-    box-shadow: 1px 4px 6px rgb(79, 79, 79);
-   }
-
-   button::after:hover{
-    transition: 0.4s ;
-   }
-  .contact{
+form {
     display: flex;
-    margin-bottom: 50px;
-  }
- /* end  sec2 */
- /* start  footer  */
-  footer{
+    flex-direction: column;
+    width: 1000px;
+}
 
-    min-width: 100%;
-    margin-left: 10px;
-    height: 50px;   
-    font-weight: 300;
-    margin-bottom: 30px;
-  }
-  footer p{
-    margin: 30px;
+label {
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #769FCD;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #769FCD;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #577c9e;
+}
+/* end sec2 */
+/* Footer styles */
+footer {
+    background-color:#F7FBFC;
+    color: #769FCD;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    margin: 5px 0;
+    list-style: none;
+}
+
+.footer-section a {
+    color: #769FCD;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    background-color: D6E6F2;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    /* foooooooooooooooooooter */
+    .footer-section {
+        flex-basis: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    /* Naaaaaaaaaaaaaaaaaaaaav start */
     
-  
-  }
-  
-  .lastsec h1{
-    font-size: 15px;
-  }
-  .lastsec p{
-    font-size: 25px;
-  }
-
-  /* end  footar  */
-  @media (max-width: 768px) {
+/* تقليل حجم الخطوط في الريسبونسف الخاص بالهواتف */
+@media (max-width: 768px) {
     body {
-        display: flex;
-        flex-direction: column;
-        align-items: start; 
-        justify-content: start;
-        gap: 5px;
-        margin-left: 0;
+        font-size: 14px; /* تقليل حجم الخط العام للنصوص */
+    }
+
+    h1 {
+        font-size: 28px; /* تقليل حجم عناوين h1 */
+    }
+
+    h2 {
+        font-size: 24px; /* تقليل حجم عناوين h2 */
+    }
+
+    h3 {
+        font-size: 20px; /* تقليل حجم عناوين h3 */
+    }
+
+    p {
+        font-size: 16px; 
     }
 
     nav {
-        padding: 10px 15px; /* Adjust padding for smaller screens */
-        font-size: 18px; /* Decrease font size */
-        backdrop-filter: blur(10px); /* Optional: Add backdrop filter */
-        background-color: #ffffff69;
+        font-size: 10px;
     }
 
+    .logo img{
+        width: 60px;
+        margin-right: 10px;
+    }
+    
     .navsign {
-        gap: 10px;
-        padding-right: 0;
+        gap: 10px; 
+        margin-right: 30px; 
     }
 
     .main {
-        margin: 0px; 
-        margin-top: 50px; 
-        font-size: 10px; 
-        text-align: start; 
-        gap: 5px;
+        font-size: 20px;
     }
 
     .main h1 {
-        font-size: 20px;
+        font-size: 36px; 
     }
-    .main h2{
-        font-size: 15px;
+
+    .main h2 {
+        font-size: 24px; 
+    }
+
+    .thetxt {
+        width: 100%; 
     }
 
     .main p {
-        margin: 10px 0;
-        font-size: 15px;
+        font-size: 18px; 
     }
 
-    .main .img img {
-        width: 800px;
-        max-width: 100px; 
-        margin: 15px 0; 
+    .img img {
+        width: 100%; /* ضبط عرض الصور بناءً على الشاشة */
     }
 
-    button {
-        display: flex;
-        justify-content: center;
-        border: none;
-        background-color:#769FCD; ;
-        text-decoration: none;
-        padding: 15px;
-        font-size:100%;
-        align-items: center;
-        color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        box-shadow: 1px 4px 6px gray;
-        height: 30px;
-        width: 90px;
+    /* تقليل حجم الخطوط داخل الأقسام الأخرى */
+    section {
+        font-size: 18px;
+        
     }
 
-    .sec2 {
-        margin: 2px; 
+    .sec1 {
+        font-size: 16px; /* تقليل حجم النصوص داخل الأقسام */
+    }
+
+    /* تقليل حجم الخطوط داخل القسم الثاني */
+    .sec2 p {
+        font-size: 18px;
     }
 
     .sec2 img {
-        width: 100%;
-        max-width: 600px; 
-        margin: 15px 0;  
+        width: 100%; /* ضبط عرض الصور بناءً على الشاشة */
     }
 
-    .sec2 p {
-    
-        font-size: 15px; 
-        max-width: 100%;
-        margin: 10px 0;
+    /* تقليل حجم الخطوط داخل الفورم */
+    form {
+        font-size: 16px;
     }
 
-    .input {
-        
-        font-size: 12px; 
-        width: 120px; 
-        max-width: 900px;
-        margin-right: 0; 
-        height: 7px;
-       margin-top: 10px;
+    label {
+        font-size: 16px; /* تقليل حجم الخطوط للتسميات داخل الفورم */
     }
 
-    .button {
-        background-color: #769FCD;
-        font-size: 12px; 
-        width: 90px; 
-        margin: 0;
-        height:60px;
-        margin-top: 10px;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px; /* تقليل حجم الخطوط للحقول داخل الفورم */
     }
 
-    section {
-        margin: auto;
-        font-size: 15px; 
-        padding: 0px;
-        
-    }
-    section  .h1about{
-        margin-left: 40px;
-        
-        font-size: 20px;
-
-    }
-    section .sec1 {
-        margin-top: 10px; 
-        margin-bottom: 10px; 
-        box-shadow: none; 
-        max-height: none;
-        padding: 0%;
+    button {
+        font-size: 16px; /* تقليل حجم الخط للأزرار داخل الفورم */
     }
 
-    section .sec1 p {
-        margin: 10px;
-        font-size: 15px;
-        margin: 0px;
-        padding: 0px;
-    }
-
+    /* تقليل حجم الخطوط داخل التذييل */
     footer {
-        margin: 10px; 
-        padding: 0px; 
-        font-size: 14px; 
-        
+        font-size: 14px;
     }
-    P{
-        font-size: 15px;
+
+    .footer-section h3 {
+        font-size: 18px; /* تقليل حجم عناوين h3 داخل التذييل */
+    }
+
+    .footer-section p,
+    .footer-section ul,
+    .footer-section li {
+        font-size: 14px; /* تقليل حجم النصوص داخل التذييل */
     }
 }
+
+body {
+    font-size: 14px; /* Adjusted font size for smaller screens */
+}
+
+/* Adjustments for navigation */
+nav {
+    font-size: 10px; /* Example: adjust navigation font size */
+}
+
+/* Adjustments for sections */
+.main,
+.sec2,
+.lastsec {
+    margin: 30px;
+    font-size: 18px; /* Example: adjust section font size */
+}
+
+.main h1,
+.main h2,
+.main p,
+.sec2 p,
+.thetxt {
+    font-size: 16px; /* Example: adjust specific element font sizes */
+}
+}
+
