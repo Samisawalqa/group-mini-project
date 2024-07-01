@@ -11,7 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="css/dashboard_style.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        .modal{
+            display: none;
+        }
+    </style>
 </head>
+
 
 <body class="sb-nav-fixed">
     <!-- Top navbar -->
@@ -119,6 +125,25 @@
                                     </div>
                                 </div>
                             </button>
+                            <div id="editFormModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close" onclick="closeEditFormModal()">×</span>
+                                    <form id="editModalForm" class="modal-form" action="#" method="POST">
+                                        <h2 class="mb-3">Edit Project</h2>
+                                        <div class="form-group">
+                                            <label for="editProjectName">Project Name:</label>
+                                            <input type="text" class="form-control" id="editProjectName" name="projectName"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="editProjectDescription">Description:</label>
+                                            <input type="text" class="form-control" id="editProjectDescription"
+                                                name="Description" required>
+                                        </div>
+                                        <button type="submit" id="editSend" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
 
                         </div>
                         <!-- project cards & add tasks -->
@@ -136,8 +161,21 @@
                                 <div class="card" style="width: 18rem;">
                                     <div class="card-header card-header d-flex justify-content-between">
                                             <span>To Do</span>
-                                            <i onclick="onclick" class="fa-solid fa-plus" style="color: #769fcd;">
-                                                
+                                            <i onclick="onclick" class="fa-solid fa-plus btn" style="color: #769fcd;">
+                                                <div id="formModal" class="modal">
+                                                    <div class="modal-content">
+                                                        <span class="close" onclick="closeFormModal()">×</span>
+                                                        <form id="modalForm" class="modal-form" action="#" method="POST">
+                                                            <h2>add new project</h2>
+                                                            <label for="nameproject:">name project:</label><br>
+                                                            <input type="text" id="nameproject" name="projectName" required><br>
+                                                            <label id="projectinputLable" for="Description">Description</label><br>
+                                                            <input id="projectinput" type="text" id="Description" name="Description"
+                                                                required><br><br>
+                                                            <input id="send" type="submit" value="Submit">
+                                                        </form>
+                                                    </div>
+                                                </div>
                                             </i>
                                     </div>
                                     <ul class="list-group list-group-flush">
