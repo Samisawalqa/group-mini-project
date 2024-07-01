@@ -10,7 +10,7 @@ body{
   background: #ffffff;
 }
 ::selection{
-  color: #fff;
+  color: #000000;
   background: #618cf8;
 }
 .wrapper{
@@ -86,13 +86,13 @@ body{
 }
 .note span{
   display: block;
-  color: #575757;
+  color: #000000;
   font-size: 16px;
   margin-top: 5px;
 }
 .note .bottom-content{
   padding-top: 10px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #000000;
 }
 .bottom-content span{
   color: #6D6D6D;
@@ -102,7 +102,7 @@ body{
   position: relative;
 }
 .bottom-content .settings i{
-  color: #6D6D6D;
+  color: #000000;
   cursor: pointer;
   font-size: 15px;
 }
