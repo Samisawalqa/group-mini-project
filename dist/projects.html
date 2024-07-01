@@ -63,7 +63,8 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="projects.html"><i class="fa-solid fa-plus"></i> Projects Cards</a>
+                                <a class="nav-link" href="projects.html"><i class="fa-solid fa-plus"></i> Projects
+                                    Cards</a>
                                 <div> <!-- To add created projects -->
 
                                     <a class="nav-link" href="#">First project</a>
@@ -85,131 +86,201 @@
                         <li class="breadcrumb-item active">Projects details to followup</li>
                     </ol>
 
-                <!-- Projects card view -->
-                <!-- Main project show -->
-                    <div  class="card mb-4">
+                    <!-- Projects card view -->
+                    <!-- Main project show -->
+                    <div class="card mb-4">
                         <div id="p_show" class="card-header">
                             <div class="proj_show">
                                 <i class="fas fa-table me-1"></i>
                                 <div>All Projects</div>
                             </div>
-                            <button type="button" class="button" onclick="openFormModal('Add Task')" >
+                            <button type="button" class="button" onclick="openFormModal('Add Task')">
                                 <span class="button__text">Add Project</span>
-                                <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
-                                        stroke="currentColor" height="24" fill="none" class="svg">
+                                <span class="button__icon rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round"
+                                        stroke-linecap="round" stroke="currentColor" height="24" fill="none"
+                                        class="svg">
                                         <line y2="19" y1="5" x2="12" x1="12"></line>
                                         <line y2="12" y1="12" x2="19" x1="5"></line>
-                                    </svg></span>
-                                    <div id="formModal" class="modal">
-                                        <div class="modal-content">
-                                            <span class="close" onclick="closeFormModal()">×</span>
-                                            <form id="modalForm" class="modal-form" action="#" method="POST">
-                                                <h2>add new project</h2>
-                                                <label for="nameproject:">name project:</label><br>
-                                                <input type="text" id="nameproject" name="projectName" required><br>
-                                                <label id="projectinputLable" for="Description">Description</label><br>
-                                                <input id="projectinput" type="text" id="Description" name="Description" required><br><br>
-                                                <input id ="send"  type="submit" value="Submit">
-                                            </form>
-                                        </div>
+                                    </svg>
+                                </span>
+                                <div id="formModal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" onclick="closeFormModal()">×</span>
+                                        <form id="modalForm" class="modal-form" action="#" method="POST">
+                                            <h2>add new project</h2>
+                                            <label for="nameproject:">name project:</label><br>
+                                            <input type="text" id="nameproject" name="projectName" required><br>
+                                            <label id="projectinputLable" for="Description">Description</label><br>
+                                            <input id="projectinput" type="text" id="Description" name="Description"
+                                                required><br><br>
+                                            <input id="send" type="submit" value="Submit">
+                                        </form>
                                     </div>
+                                </div>
                             </button>
+
                         </div>
-                    <!-- project cards & add tasks -->
+                        <!-- project cards & add tasks -->
                         <div id="to_add_proj" class="card-body">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                <div>"Project Name"</div> 
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-table me-1"></i>
+                                    <div>"Project Name"</div>
+                                </div>
+                                <div class="bg-danger rounded p-2 btn ">
+                                    <span class="text-light" id="removeProject_btn" > - RemoveProject</span>
+                                    </div>
                             </div>
                             <div id="p_cards" class="card-body">
                                 <div class="card" style="width: 18rem;">
-                                    <div class="card-header">
-                                        <div class="head_pTasks">
-                                            <div><strong>To Do</strong></div>
+                                    <div class="card-header card-header d-flex justify-content-between">
+                                            <span>To Do</span>
                                             <i class="fa-solid fa-plus" style="color: #769fcd;"></i>
-                                        </div>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <div class="taskItem">
-                                            <li class="list-group-item">"Task 1"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
-                                            
-                                            
+                                        <div class="taskItem ">
+                                            <li class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
+                                            </li>
                                         </div>
                                         <div>
-                                            <li class="list-group-item">"Task 2"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+                                            <li
+                                                class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
+
+                                            </li>
 
                                         </div>
                                         <div>
-                                            <li class="list-group-item">"Task 3"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+                                            <li
+                                                class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
 
+                                            </li>
                                         </div>
                                     </ul>
-                                  </div>
-                                  <div class="card" style="width: 18rem;">
-                                    <div class="card-header">
-                                        <div>
-                                            <strong>In progress</strong>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header d-flex justify-content-between">
+                                        
+                                            <span>In progress</span>
                                             <i class="fa-solid fa-plus" style="color: #769fcd;"></i>
-                                        </div>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <div>
-                                            <li class="list-group-item">"Task 1"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
-
-                                        </div>
-                                        <div>
-                                            <li class="list-group-item">"Task 2"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
-
-                                        </div>
-                                        <div>
-                                            <li class="list-group-item">"Task 3"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
-
-                                        </div>
-                                    </ul>
-                                  </div>
-                                  <div class="card" style="width: 18rem;">
-                                    <div class="card-header">
-                                        <div>
-                                            <strong>Compleated</strong>
-                                            <i class="fa-solid fa-plus" style="color: #769fcd;"></i>
-
-                                        </div>
+                                        
                                     </div>
                                     <ul class="list-group list-group-flush">
                                         <div>
-                                            <li class="list-group-item">"Task 1"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+                                            <li
+                                                class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
 
+                                            </li>
                                         </div>
                                         <div>
-                                            <li class="list-group-item">"Task 2"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+                                            <li
+                                                class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
 
+                                            </li>
                                         </div>
                                         <div>
-                                            <li class="list-group-item">"Task 3"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+                                            <li
+                                                class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
 
+                                            </li>
                                         </div>
                                     </ul>
-                                  </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-header d-flex justify-content-between">
+                                            <div>
+                                                <span>Completed</span>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-plus " style="color: #769fcd;"></i>
+                                            </div>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <div>
+                                            <li
+                                                class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
+
+                                            </li>
+                                        </div>
+                                        <div>
+                                            <li
+                                                class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                                "Task 1"
+                                                <div>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                    <i class="fa-solid fa-trash"></i>
+                                                </div>
+
+                                            </li>
+                                        </div>
+                                        <div>
+                                            <li
+                                            class="list-group-item card-header d-flex justify-content-between align-items-center">
+                                            "Task 1"
+                                            <div>
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <i class="fa-solid fa-trash"></i>
+                                            </div>
+
+                                        </li>
+                                        </div>
+                                    </ul>
+                                </div>
                             </div>
-                           
+
                         </div>
 
                     </div>
                 </div>
-                </div>
-            </main>
-            <!-- <footer class="py-4 bg-light mt-auto">
+        </div>
+        </main>
+        <!-- <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">Copyright &copy; OCA Team2 &copy; 2024</div>
                     </div>
                 </div>
             </footer> -->
-        </div>
+    </div>
     </div>
     <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/chart-area-demo.js"></script>
