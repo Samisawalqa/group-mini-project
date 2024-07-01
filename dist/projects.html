@@ -94,7 +94,7 @@
                                 <div>All Projects</div>
                             </div>
                             <button type="button" class="button">
-                                <span class="button__text">Add Item</span>
+                                <span class="button__text">Add Project</span>
                                 <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                         viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
                                         stroke="currentColor" height="24" fill="none" class="svg">
@@ -104,7 +104,7 @@
                             </button>
                         </div>
                     <!-- project cards & add tasks -->
-                        <div class="card-body">
+                        <div id="to_add_proj" class="card-body">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 <div>"Project Name"</div> 
@@ -118,9 +118,19 @@
                                         </div>
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">"Task 1"<i class="fa-solid fa-pen-to-square"></i></li>
-                                        <li class="list-group-item">"Task 2"</li>
-                                        <li class="list-group-item">"Task 3"</li>
+                                        <div class="taskItem">
+                                            <li class="list-group-item">"Task 1"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+                                            
+                                            
+                                        </div>
+                                        <div>
+                                            <li class="list-group-item">"Task 2"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+
+                                        </div>
+                                        <div>
+                                            <li class="list-group-item">"Task 3"<i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i></li>
+
+                                        </div>
                                     </ul>
                                   </div>
                                   <div class="card" style="width: 18rem;">
@@ -162,8 +172,8 @@
             </footer>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/chart-area-demo.js"></script>

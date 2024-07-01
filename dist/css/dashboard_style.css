@@ -11355,7 +11355,7 @@ td .a {
   align-items: center;
 }
 
-.head_pTasks, .taskItem {
+.head_pTasks, .taskItem.li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
