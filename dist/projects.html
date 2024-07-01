@@ -87,13 +87,13 @@
 
                 <!-- Projects card view -->
                 <!-- Main project show -->
-                    <div class="card mb-4">
+                    <div  class="card mb-4">
                         <div id="p_show" class="card-header">
                             <div class="proj_show">
                                 <i class="fas fa-table me-1"></i>
                                 <div>All Projects</div>
                             </div>
-                            <button type="button" class="button">
+                            <button type="button" class="button" onclick="openFormModal('Add Task')" >
                                 <span class="button__text">Add Project</span>
                                 <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                         viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
@@ -101,6 +101,19 @@
                                         <line y2="19" y1="5" x2="12" x1="12"></line>
                                         <line y2="12" y1="12" x2="19" x1="5"></line>
                                     </svg></span>
+                                    <div id="formModal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" onclick="closeFormModal()">×</span>
+                                            <form id="modalForm" class="modal-form" action="#" method="POST">
+                                                <h2>add new project</h2>
+                                                <label for="nameproject:">name project:</label><br>
+                                                <input type="text" id="nameproject" name="projectName" required><br>
+                                                <label id="projectinputLable" for="Description">Description</label><br>
+                                                <input id="projectinput" type="text" id="Description" name="Description" required><br><br>
+                                                <input id ="send"  type="submit" value="Submit">
+                                            </form>
+                                        </div>
+                                    </div>
                             </button>
                         </div>
                     <!-- project cards & add tasks -->
@@ -179,20 +192,20 @@
                                     </ul>
                                   </div>
                             </div>
-
+                           
                         </div>
 
                     </div>
                 </div>
                 </div>
             </main>
-            <footer class="py-4 bg-light mt-auto">
+            <!-- <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">Copyright &copy; OCA Team2 &copy; 2024</div>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
         </div>
     </div>
     <script src="main.js"></script>
