@@ -1,3 +1,4 @@
+// Add project btn
 let show = document.getElementById("to_add_proj");
 
         // Object to hold form URLs for different projects - Popup
@@ -183,3 +184,5 @@ let show = document.getElementById("to_add_proj");
                                     
 
         });
+
+// Add tasks btn
