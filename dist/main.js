@@ -1,56 +1,3 @@
-const project = [
-    {
-        id : 1,
-        name : "Home page",
-        NO_of_tasks : 3,
-        tasks : {
-            task_1 : "navbar",
-            task_2 : "body section",
-            task_3 : "footer"
-        },
-        status : "Compleated",
-        due_date : Date(2024, 6, 1),
-        history : {
-
-        }
-        }
-    ,
-    {
-        id : 2,
-        name : "Dashboard",
-        NO_of_tasks : 3,
-        tasks : {
-            task_1 : "bootstrap design",
-            task_2 : "data table",
-            task_3 : "cards"
-        },
-        status : "To Do",
-        due_date : Date(2024, 7, 1),
-        history : {
-
-        }
-    }
-    ,
-    {
-        id : 3,
-        name : "Project cards",
-        NO_of_tasks : 3,
-        tasks : {
-            task_1 : "add project",
-            task_2 : "add_fetch data",
-            task_3 : "edit & delete icone"
-        },
-        status : "In progress",
-        due_date : Date(2024, 6, 1),
-        history : {
-
-        }
-        }
-];
-
-// Store the data in local storage
-// localStorage.setItem('employees', JSON.stringify(employees));
-
 let show = document.getElementById("to_add_proj");
 
         // Object to hold form URLs for different projects - Popup
@@ -60,14 +7,12 @@ let show = document.getElementById("to_add_proj");
             'add task': 'forms/add-task-form.html' // Example for Add Task button
         };
 
-
         function openFormModal(content) {
             var modal = document.getElementById('formModal');
             var modalForm = modal.querySelector('.modal-form');
             modalForm.action = projectForms[content.toLowerCase()];
             modal.style.display = 'block';
         }
-
 
         function closeFormModal() {
             var modal = document.getElementById('formModal');
@@ -82,17 +27,17 @@ let show = document.getElementById("to_add_proj");
                 modal.style.display = "none";
             }
         }
-        // valus from project name and description
+        // valus from project name and description to add project
         document.getElementById('send').addEventListener('click',(e)=>{
             e.preventDefault();
 
             const projectName = document.getElementById('nameproject').value;
             const projectDescription = document.getElementById('projectinput').value;
-    
             const signedInUser= JSON.parse(localStorage.getItem('signedInUser'));
             signedInUser.project = {projectName:projectName,projectDescription:projectDescription};
             localStorage.setItem("signedInUser",JSON.stringify(signedInUser));
-            document.getElementById('to_add_proj').innerHTML+=`<div class="card-header d-flex justify-content-between align-items-center">
+            document.getElementById('to_add_proj').innerHTML+=
+                            `<div class="card-header d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
                                     <i class="fas fa-table me-1"></i>
                                     <div>${signedInUser.project.projectName}</div>
@@ -101,8 +46,8 @@ let show = document.getElementById("to_add_proj");
                                 <div class="bg-danger rounded p-2 btn ">
                                     <span class="text-light" id="removeProject_btn" > - RemoveProject</span>
                                     </div>
-                            </div>
-                            <div id="p_cards" class="card-body">
+                                 </div>
+                                <div id="p_cards" class="card-body">
                                 <div class="card" style="width: 18rem;">
                                     <div class="card-header card-header d-flex justify-content-between">
                                             <span>To Do</span>
@@ -231,6 +176,10 @@ let show = document.getElementById("to_add_proj");
                                         </div>
                                     </ul>
                                 </div>
-                            </div>`
-        })
-    
+                            </div>`;
+            document.getElementById('sideProjects').innerHTML+=
+                                    `<a class="nav-link" href="#">${signedInUser.project.projectName}</a>`;
+                                   
+                                    
+
+        });
